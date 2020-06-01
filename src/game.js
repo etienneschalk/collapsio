@@ -1,3 +1,5 @@
+import { rgba } from './util.js';
+
 const nCells = 32;
 const tileSize = 4;
 let mousePressed = false;
@@ -24,7 +26,7 @@ function init() {
 
 function draw(ctx, translateX = 0, translateY = 0) {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  ctx.clearRect(0, 0, 32 * 64 , 32 * 64); // il y a des carres qui depassent
+  ctx.clearRect(0, 0, 32 * 64, 32 * 64); // il y a des carres qui depassent
 
   // ctx.save()
   ctx.translate(translateX, translateY);
@@ -77,12 +79,6 @@ function preRenderColors() {
   }
 
   return canvas;
-}
-
-function rgba(red, green, blue, alpha = 1) {
-  if (alpha == 1)
-    return 'rgb('+red+', '+green+', '+blue+')';
-  return 'rgba('+red+', '+green+', '+blue+', '+alpha+')';
 }
 
 export default {

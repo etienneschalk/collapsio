@@ -4,6 +4,10 @@ html, body {
     padding: 0;
     margin: 0;
     position: fixed;
+    overflow: hidden;
+    display: block;
+    border: 0;
+    font-family: monospace;
 }
 
 #surface {
@@ -11,5 +15,37 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
+    position: fixed;
     box-sizing: border-box;
+}
+
+#head {
+    top:0;
+    border-bottom:1px solid black;
+    font-size:2em;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: rgba(255,0,0,0.2);
+}
+
+#foot {
+    bottom:0;
+    font-size:2em;
+    border-top:1px solid black;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,255,0.2);
+}
+
+#sidepanel {
+    right:0;
+    font-size:2em;
+    border-left:1px solid black;
+    position: fixed;
+    width: 512px;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,255,0,0.2);
 }

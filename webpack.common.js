@@ -5,13 +5,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/index.js',
-    another: './src/another-module.js',
-    print: './src/print.js',
+    // util: './src/util.js',
   },
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: '<title>',
+      title: 'Map',
     }),
   ],
   output: {
@@ -23,11 +22,17 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
           use: [
-              'style-loader',
-              'css-loader',
-            ],
+            'file-loader',
+          ],
       },
     ],
-  },
+  }
 }
