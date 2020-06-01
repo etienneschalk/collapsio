@@ -72,7 +72,7 @@ function drawCanvas(translate = false) {
 	ctx.fillRect(-canvas.width, -canvas.height, 2* canvas.width, 2* canvas.height);
 	// ctx.fillRect(0, 0, canvas.width, canvas.height);
 	if (translate)
-		ctx.translate(ctx.canvas.width / 2, ctx.canvas.height / 2); // now 0,0 is the center of the canvas.
+		ctx.translate(Math.floor(ctx.canvas.width / 2), Math.floor(ctx.canvas.height / 2)); // now 0,0 is the center of the canvas.
 
 	map.draw(ctx, images);
 }
