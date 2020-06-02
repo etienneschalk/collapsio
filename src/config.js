@@ -1,5 +1,6 @@
-const config = {
-  darkMode: false,
+export const config = {
+  debug: true,
+  darkMode: true,
   fadeOut: 1,
   nCells: 32,
   terrains: [
@@ -10,5 +11,3 @@ const config = {
     { id: 5, name: "stone", importName: 'ImageTerrainStone', url: 'stone.png' },
   ],
 };
-
-export { config };
