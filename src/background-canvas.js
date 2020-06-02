@@ -55,7 +55,7 @@ export class BackgroundCanvas {
 		this.initCanvas(canvas);
 		this.initCanvasContext();
 
-		this.map = new TerrainMap(config.nCells);
+		this.map = new TerrainMap(config.nCells, config.tileSize);
 
 		try {
 			this.log("info", "Awaiting loadImages()...");
@@ -115,7 +115,7 @@ export class BackgroundCanvas {
 	}
 
 	drawCanvas(translate = false) {
-		this.ctx.fillStyle = config.darkMode ? rgba(0, 0, 0, config.fadeOut) : rgba(255, 255, 255, config.fadeOut);
+		this.ctx.fillStyle = config.darkMode ? rgba(0, 0, 0, config.fadeOut) : rgba(150, 150, 150, 1);
 		this.ctx.fillRect(-this.canvas.width, -this.canvas.height, 2 * this.canvas.width, 2 * this.canvas.height);
 		// this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 		if (translate)

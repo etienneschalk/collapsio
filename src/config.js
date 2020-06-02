@@ -1,8 +1,9 @@
 export const config = {
   debug: true,
-  darkMode: true,
+  darkMode: false,
   fadeOut: 1,
   nCells: 32,
+  tileSize: 32,
   terrains: [
     { id: 1, name: "water", importName: 'ImageTerrainWater', url: 'water.png' },
     { id: 2, name: "grass", importName: 'ImageTerrainGrass', url: 'grass.png' },

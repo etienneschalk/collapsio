@@ -26,5 +26,10 @@ import './style.css';
   document.body.appendChild(aside);
   document.body.appendChild(header);
   document.body.appendChild(footer);
+
+  let button1 = document.createElement('button');
+  button1.textContent = "Button 1";
+  aside.appendChild(document.createElement('br'));
+  aside.appendChild(button1);
 })();
 
